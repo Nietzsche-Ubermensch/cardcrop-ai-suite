@@ -27,7 +27,7 @@ const ImageGenerator: React.FC = () => {
     }
   };
 
-  const selectKey = () => {
+  const updateApiKey = () => {
     const newKey = prompt('Enter your OpenAI API key:');
     if (newKey) {
       localStorage.setItem('OPENAI_API_KEY', newKey);
@@ -99,7 +99,7 @@ const ImageGenerator: React.FC = () => {
                         <div className="w-2 h-2 bg-[#73bf69] rounded-full animate-pulse"></div>
                         SYSTEM READY
                     </div>
-                    <button onClick={selectKey} className="text-[10px] text-[#3274d9] hover:underline font-mono">
+                    <button onClick={updateApiKey} className="text-[10px] text-[#3274d9] hover:underline font-mono">
                         UPDATE API KEY
                     </button>
                 </div>
