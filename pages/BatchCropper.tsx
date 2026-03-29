@@ -64,7 +64,7 @@ const BatchCropper: React.FC = () => {
       const MAX_SIZE_MB = 20;
       const MAX_BATCH_SIZE = 50;
       
-      const files = Array.from(event.target.files);
+      const files = Array.from(event.target.files) as File[];
       
       if (files.length > MAX_BATCH_SIZE) {
           addLog(`Warning: Selecting >${MAX_BATCH_SIZE} files may slow down browser.`);
